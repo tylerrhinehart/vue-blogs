@@ -10,22 +10,21 @@
 </template>
 
 <script>
-  import { store } from '../store'
   export default {
     name: 'home',
     data() {
       return {
-        blogs: []
       }
     },
     methods: {
-      drawBlogs(arr) {
-        this.blogs = arr
-        console.log(this.blogs)
+    },
+    computed: {
+      blogs() {
+        return this.$store.state.blogs
       }
     },
     mounted() {
-      store.getBlogs(this.drawBlogs)
+      this.$store.dispatch('getBlogs')
     }
   }
 

@@ -23,7 +23,7 @@
                     title: this.title,
                     body: this.body
                 }
-                store.createBlog(blog)
+                this.$store.dispatch("createBlog", blog)
                 
             }
         }
