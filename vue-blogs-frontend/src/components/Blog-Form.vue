@@ -2,29 +2,29 @@
     <div>
         <form @submit="createBlog()">
             <input type="text" v-model="title" placeholder="Title">
-            <input type="text" v-model="body" placeholder="Body">
+            <wysiwyg v-model="myHTML" />
             <button type="submit">Create Blog</button>
         </form>
     </div>
 </template>
 
 <script>
-    import { store } from '../store'
     export default {
         data() {
             return {
+                myHTML: '',
                 title: '',
-                body: ''
+                body: '',
             }
         },
         methods: {
             createBlog() {
                 var blog = {
                     title: this.title,
-                    body: this.body
+                    body: this.myHTML
                 }
                 this.$store.dispatch("createBlog", blog)
-                
+
             }
         }
     }

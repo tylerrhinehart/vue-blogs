@@ -5,10 +5,14 @@ import App from './App'
 import router from './router'
 import VModal from 'vue-js-modal'
 import { store } from './store'
+import wysiwyg from 'vue-wysiwyg'
+
+import "vue-wysiwyg/dist/vueWysiwyg.css"
 
 Vue.config.productionTip = false
 
 Vue.use(VModal)
+Vue.use(wysiwyg, {})
 
 /* eslint-disable no-new */
 new Vue({
@@ -18,3 +22,4 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+

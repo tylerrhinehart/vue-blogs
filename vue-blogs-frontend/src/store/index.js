@@ -35,10 +35,11 @@ var store = new vuex.Store({
                 })
         },
         createBlog({ commit, dispatch }, blog) {
+            console.log(blog)
             $.post("//localhost:3000/api/blogs", blog)
                 .then((actualBlog) => {
                     commit('addBlog', actualBlog)
-                    router.push('/')
+                    router.push('/blogs/' + actualBlog._id)
                 }).fail(err => {
                     console.error(err)
                 })
