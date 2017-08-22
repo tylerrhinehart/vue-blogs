@@ -2,8 +2,8 @@
   <div id="app">
     <div>
       <!-- THIS IS YOUR NEW <a> -->
-      <router-link :to="{name: 'Home'}">Home</router-link>
-      <router-link :to="{name: 'CreateBlog'}">Create Blog</router-link>
+      <router-link :to="{name: 'Home'}" class="btn btn-default">Home</router-link>
+      <router-link :to="{name: 'CreateBlog'}" class="btn btn-default">Create Blog</router-link>
     </div>
     <hr>
     <img src="./assets/logo.png">

@@ -1,11 +1,16 @@
 <template>
   <div class="home">
     <h1>Blogs</h1>
-    <ul>
+    <div v-for="blog in blogs">
+      <div class="col-xs-6 col-xs-offset-3 thumbnail">
+        <router-link :to="{name: 'Blog', params: { blogId:  blog._id } }" class="btn btn-default">{{blog.title}}</router-link>
+      </div>
+    </div>
+    <!-- <ul>
       <li v-for="blog in blogs">
         <router-link :to="{name: 'Blog', params: { blogId:  blog._id } }">{{blog.title}}</router-link>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
