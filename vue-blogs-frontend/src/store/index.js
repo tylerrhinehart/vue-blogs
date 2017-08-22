@@ -8,7 +8,7 @@ vue.use(vuex)
 var store = new vuex.Store({
     state: {
         blogs: [],
-        activeBlog: {}
+        activeBlog: {},
     },
     mutations: {
         updateBlogs(state, blogs) {

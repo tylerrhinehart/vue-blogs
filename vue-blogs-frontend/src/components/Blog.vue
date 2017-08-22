@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ blog.title }}</h1>
-        <div v-html="htmlContent"></div>
+        <div v-html="blog.body"></div>
     </div>
 </template>
 
@@ -9,7 +9,6 @@
     export default {
         data() {
             return {
-                htmlContent: this.$store.state.activeBlog.body
             }
         },
         methods: {
